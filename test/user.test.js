@@ -2,30 +2,27 @@ import supertest from "supertest";
 import {web} from "../src/application/web.js";
 import {prismaClient} from "../src/application/database.js";
 import {logger} from "../src/application/logging.js";
+import {createTestUser, removeTestUser} from "./test-util.js";
 
 describe('POST /api/users', ()=>{
 
     afterEach(async ()=>{
-        await prismaClient.user.deleteMany({
-            where:{
-                username :'chairul'
-            }
-        })
+        await removeTestUser()
     })
 
     it('should can register new user', async () => {
         const result = await supertest(web)
             .post('/api/users')
             .send({
-                username: 'chairul',
+                username: 'test',
                 password: 'rahasia',
-                name: 'yusuf'
+                name: 'test'
             });
 
         expect(result.status).toBe(200);
-        expect(result.body.data.username).toBe("chairul");
-        expect(result.body.data.name).toBe("yusuf");
-        expect(result.body.data.password).toBe("rahasia")
+        expect(result.body.data.username).toBe("test");
+        expect(result.body.data.name).toBe("test");
+        expect(result.body.data.password).toBeDefined()
     });
 
     it('should reject if request is invalid', async () => {
@@ -51,5 +48,29 @@ describe('POST /api/users', ()=>{
                     username : 'test'
                 }
             })
+    });
+    
+})
+
+describe("test login", ()=>{
+    beforeEach(async ()=>{
+        await createTestUser();
+    })
+
+    afterEach(async ()=>{
+        await removeTestUser()
+    })
+
+    it('should can login', async () => {
+        const result = await supertest(web)
+            .post('api/users/login')
+            .send({
+                username :"test",
+                password :"rahasia"
+            })
+        logger.info(result.body)
+        expect(result.status).toBe(200)
+        expect(result.body.token).toBeDefined()
+        expect(result.body.token).not.toBe("test")
     });
 })

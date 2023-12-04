@@ -1,8 +1,10 @@
 import express from "express";
 import UserController from "../controller/user-controller.js";
+import userController from "../controller/user-controller.js";
 
 const publicRouter = new express.Router()
 publicRouter.post('/api/users',UserController.register)
+publicRouter.post('/api/users/login',userController.login)
 
 const userRouter = new express.Router()
 
@@ -11,15 +13,24 @@ userRouter.get('/',(req, res)=>{
     res.render('index')
 })
 
+//halaman login
+userRouter.get('/login',(req,res)=>{
+    res.render('login')
+})
+userRouter.get('/index/login', (req, res) =>{
+    res.render('index')
+})
 userRouter.get ('/sign-up',(req, res) =>{
         res.render('sign-up')
 
 
 //-------halaman destination----------
 //halaman bali destination
-    userRouter.get('/bali-destination', (req,res)=>{
+userRouter.get('/bali-destination', (req,res)=>{
         res.render('Bali-destination')
     })
+
+
 
 //halaman lombok destination
     userRouter.get('/lombok-destination', (req,res)=>{
@@ -106,15 +117,6 @@ userRouter.get ('/sign-up',(req, res) =>{
 // })
 //-------------------------------------
 
-//halaman login
-    userRouter.get('/login',(req,res)=>{
-        res.render('login')
-    })
-
-//halaman signup / registrasi
-    userRouter.get('/sign-up',(req,res)=>{
-        res.render('sign-up')
-    })
 
     userRouter.use('/' ,function(req, res){
         res.status(404)
