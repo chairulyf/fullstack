@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
 }
-
+ 
 body{
     background-color: #D8D5D5;
     font-family: 'Poppins', sans-serif;
@@ -55,8 +55,7 @@ cursor: pointer;
 border: none;
 margin-top: 200px;
 opacity: 60%;
-margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
-/* font-size: 40px; */
+margin-right: 0;
 }
 
 .main-nav-link
@@ -98,144 +97,172 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
 
 }
 
-
-.judul-hotel{
-    margin-top: -340px;
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
 }
 
-.container{
+#blog{
     display: flex;
-    align-items: flex-start;
-    margin: 0 80px 0;
-    border: #255A65 solid 1px;
-    border-radius: 5px;
-    padding: 20px;
-    position: relative;
-    
-}
-.about-detail{
-    margin-top: -30px;
-}
-.about {
-    flex: 1; /* Menggunakan flex untuk memastikan elemen about mengambil sebagian besar ruang yang tersedia */
-    padding: 20px; 
-    margin-top: 30px; /* Sesuaikan nilai sesuai kebutuhan */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0);
 }
 
-/* Untuk menyusun elemen-elemen di dalam elemen about */
-.sub-title {
-    margin-bottom: 10px; /* Memberikan margin bawah agar tidak terlalu rapat */
-}
-
-.Title-about{
-    font-size: 1.5rem;
-    margin-top: -18px;
-    color: #255A65;
-}
-.Title-content{
-    font-size: 1.2rem;
-    color: #255A65;
-} 
-.sub-title{
-    color: #e67e22;
-}
-.Title-2{
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #255A65;
-}
-.content{
-    text-align: justify;
-    font-size: 15px;
-    margin-right: 100px;
-}
-
-.content-2 {
-    text-align: justify;
-    font-size: 12px;
-    margin-top: 50px;
-    margin-left: -340px; /* Sesuaikan nilai margin sesuai kebutuhan */
-    
-}
-.content-2 p{
-    font-size: 15px;
-}
-ol {
-    list-style-type: circle;
-}
-
-.content-2 li{
-    margin-left: 20px;
-}
-.image{
-    flex: 0 0 320px; 
-    /* position: fixed; */
-    /* overflow: hidden; */
+.blog-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }
 
-.image img {
-    width: 320px;
-    height: 300px;
-    /* height: auto; */
-    border-radius: 5px;
+.blog-heading span{
+    color: rgb(25, 43, 37);
 }
 
-.closing{
-    margin-top: 20px;
-    color: #255A65;
-    font-size: 1rem;
-    
-}
-.closing h4{
+.blog-heading h3{
+    font-size: 2rem;
+    color: #0e282c;
     font-weight: 700;
 }
-/* maps */
-iframe{
-    width: 400px;
-    height: 300px;
-    border-radius: 5px;
-    margin-top: 10px;
+
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
 }
 
-.maps{
-    margin-top: 10px;
+.blog-box{
+    width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    margin: 20px;
 }
-.maps{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color:#cf711f;
+
+.blog-img{
+    width: 100%;
+    height: auto;
 }
-/* end maps */
-/* footer */
-.footer{
-    margin-top: 90px;
+
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center ;
+}
+
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog-text span{
+    color: rgb(21, 88, 67);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.blog-text .blog-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #272727;
+}
+
+.blog-text .deskrip{
+    color: rgba(32, 34, 32, 0.733);
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 4px;
     background-color: #255A65;
-    width: 100vw;
-    height: 140px;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer p{
-    margin-top:20px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
     font-size: 15px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-    color: orange;
-}
-
-.social-icons{
-    margin-top: 19px;
-    font-size: 30px;
+    font-weight: 600;
     
 }
+button:hover{
+    opacity: 50%;
+}
 
-.social-icons i{
+/* footer */
+
+footer{
+    background-color: #084c57;
+    margin-top: 80px;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins',  sans-serif;
+    padding-top: 40px;
+    color: aliceblue;
+  }
+  
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    font-weight: 500;
+  }
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  
+  .social-icons{
+    margin-top: 10px;
+    font-size: 30px;
+    
+  }
+  
+  .social-icons i{
     margin-right: 20px;
     margin-left: 20px;
     color: #cf711f;
-}
+  }
+  .footer-bottom{
+    background-color: #182F52;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #cf711f;
+  } 
 /* end footer */
