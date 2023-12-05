@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var encodedInvoiceText = encodeURIComponent(invoiceText);
 
     // Arahkan pengguna ke halaman invoicee.html dengan menggunakan URL parameter
-    window.location.href = "invoice.html?invoiceText=" + encodedInvoiceText;
+    window.location.href = "invoice?invoiceText=" + encodedInvoiceText;
     }
 
     
