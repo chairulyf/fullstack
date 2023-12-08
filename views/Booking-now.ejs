@@ -18,12 +18,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+<<<<<<< HEAD
 </head>
 
 <body>
     <header class="header">
         <div class="button-back">
             <button><a href="Bali-destination.html"> Back Home </a></button>
+=======
+    <script src="\Project\BE-2-section-surabaya-group-4\public\js\Booking.js">
+        
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="button-back">
+            <button><a href="Bali-destination"> Back Home </a></button>
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
         </div>
         <div class="label-head">
             <h3>Booking Now</h3>
@@ -34,6 +47,7 @@
     <section class="form-input-book">
         <div class="container">
             <header>Booking Form</header>
+<<<<<<< HEAD
             <form action="invoice" class="form" onsubmit="printInvoice(); return false;">
                 <div class="input-box">
                     <label>Full Name</label>
@@ -42,10 +56,21 @@
                 <div class="input-box">
                     <label>Email Address</label>
                     <input type="text" id="email" placeholder="Enter email address" required />
+=======
+            <form action="Booking-now" class="form" onsubmit="printInvoice(); return false;">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" name="fullName" placeholder="Enter full name" required />
+                </div>
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="text" name="emailAddress" placeholder="Enter email address" required />
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
                 </div>
                 <div class="column">
                     <div class="input-box">
                         <label>Phone Number</label>
+<<<<<<< HEAD
                         <input type="text" id="phone" placeholder="Enter phone number" required />
                     </div>
                 </div>
@@ -53,10 +78,14 @@
                     <div class="input-box">
                         <label>ID Number Hotel</label>
                         <input type="text" id="id" placeholder="Enter id number hotel" readonly />
+=======
+                        <input type="number" name="phoneNumber" placeholder="Enter phone number" required />
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
                     </div>
                 </div>
                 <div class="input-box address">
                     <label>Booking Details</label>
+<<<<<<< HEAD
                     <input type="text" id="id_destination" value="Hotel Serenity Palace" placeholder="Hotel Name"  required readonly/>
                     <input type="text" type="text" id="hotelAddress" value="Canggu, Denpasar" readonly />
                     <input type="text" id="guideName" value="Jhon Doe" readonly />
@@ -64,14 +93,30 @@
                     <div class="column">
                         <input type="text" id="vehicleName" value="AVP CAR" readonly />
                         <input type="text" id="policeNumber" value="B 1234 BCD" readonly />
+=======
+                    <input type="text" id="hotelName" name="hotelName" readonly />
+                    <input type="text" type="text" id="hotelAddress" name="hotelAddress" readonly />
+                    <input type="text" id="guideName" name="guideName" readonly />
+                    <input type="text" id="guidePrice" name="guidePrice" readonly />
+                    <div class="column">
+                        <input type="text" id="vehicleName" name="vehicleName" readonly />
+                        <input type="text" id="policeNumber" name="policeNumber" readonly />
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
                     </div>
                 </div>
                 <div class="input-box">
                     <label>Destination Price</label>
+<<<<<<< HEAD
                     <input type="text" id="destinationPrice" value="$510.00 USD" readonly />
                 </div>
                 <div class="form-submit-btn">
                     <button type="submit" onclick="kirimData()">Request To Book</button>
+=======
+                    <input type="text" id="destinationPrice" name="destinationPrice" readonly />
+                </div>
+                <div class="form-submit-btn">
+                    <button type="submit" onclick="printInvoice()">Request To Book</button>
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
                 </div>
             </form>
         </div>
@@ -92,6 +137,7 @@
             <p>copyright &copy;2023 Group-4</p>
         </div>
     </footer>
+<<<<<<< HEAD
     <script>
         function kirimData() {
             const id = document.getElementById('id').value;
@@ -147,6 +193,87 @@
     </script>
 
 
+=======
+    
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("hotelName").dataset.value = "Hotel Serenity Palace";
+            document.getElementById("hotelAddress").dataset.value = "Canggu, Denpasar";
+            document.getElementById("guideName").dataset.value = "John Doe";
+            document.getElementById("guidePrice").dataset.value = "$200";
+            document.getElementById("vehicleName").dataset.value = "AVP CAR";
+            document.getElementById("policeNumber").dataset.value = "ABC123456";
+            document.getElementById("destinationPrice").dataset.value = "$510.00 USD";
+        
+            // Populasikan nilai dari atribut data ke dalam elemen input
+            document.getElementById("hotelName").value = document.getElementById("hotelName").dataset.value;
+            document.getElementById("hotelAddress").value = document.getElementById("hotelAddress").dataset.value;
+            document.getElementById("guideName").value = document.getElementById("guideName").dataset.value;
+            document.getElementById("guidePrice").value = document.getElementById("guidePrice").dataset.value;
+            document.getElementById("vehicleName").value = document.getElementById("vehicleName").dataset.value;
+            document.getElementById("policeNumber").value = document.getElementById("policeNumber").dataset.value;
+            document.getElementById("destinationPrice").value = document.getElementById("destinationPrice").dataset.value;
+        
+            window.printInvoice = function () {
+                var fullName = document.querySelector('input[name="fullName"]').value;
+                var emailAddress = document.querySelector('input[name="emailAddress"]').value;
+                var phoneNumber = document.querySelector('input[name="phoneNumber"]').value;
+        
+                var hotelName = document.getElementById("hotelName").value;
+                var hotelAddress = document.getElementById("hotelAddress").value;
+                var guideName = document.getElementById("guideName").value;
+                var guidePrice = document.getElementById("guidePrice").value;
+                var vehicleName = document.getElementById("vehicleName").value;
+                var policeNumber = document.getElementById("policeNumber").value;
+                var destinationPrice = document.getElementById("destinationPrice").value;
+        
+                var invoiceText = `
+                Invoice
+                Full Name: ${fullName}
+                Email Address: ${emailAddress}
+                Phone Number: ${phoneNumber}
+                
+                Booking Details
+                Hotel Name: ${hotelName}
+                Hotel Address: ${hotelAddress}
+                Guide Name: ${guideName}
+                Guide Price: ${guidePrice}
+                Vehicle Name: ${vehicleName}
+                Police Number: ${policeNumber}
+                
+                
+                Destination Price: ${destinationPrice}
+                `;
+        
+               // Encode data untuk URL
+            var encodedInvoiceText = encodeURIComponent(invoiceText);
+        
+            // Arahkan pengguna ke halaman invoicee.html dengan menggunakan URL parameter
+            window.location.href = "invoice?invoiceText=" + encodedInvoiceText;
+            }
+        
+            
+        
+        });
+        
+        // INVOICE
+        
+          // Ambil parameter dari URL
+          var urlParams = new URLSearchParams(window.location.search);
+          var invoiceText = urlParams.get("invoiceText");
+        
+          // Tampilkan data di halaman
+          if (invoiceText) {
+              // Decode data dari URL
+              var decodedInvoiceText = decodeURIComponent(invoiceText);
+              document.getElementById("invoiceContent").innerHTML = decodedInvoiceText;
+          } else {
+              console.error("Data invoice tidak ditemukan");
+          }
+        
+        
+    </script> -->
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
    
 </body>
 

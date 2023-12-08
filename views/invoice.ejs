@@ -25,6 +25,7 @@
     <div id="invoiceContainer">
         <h1>INVOICE</h1>
         <div id="invoiceContent"></div>
+<<<<<<< HEAD
         <table>
             <tr>
                 <td>Full name</td>
@@ -70,6 +71,25 @@
         </table>
     </div>
     
+=======
+    </div>
+
+    <script>
+
+        // Ambil parameter dari URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var invoiceText = urlParams.get("invoiceText");
+
+        // Tampilkan data di halaman
+        if (invoiceText) {
+            // Decode data dari URL
+            var decodedInvoiceText = decodeURIComponent(invoiceText);
+            document.getElementById("invoiceContent").innerHTML = decodedInvoiceText;
+        } else {
+            console.error("Data invoice tidak ditemukan");
+        }
+    </script>
+>>>>>>> 525e78f35dc6624f9a3b6fcd2654ed972d5f73e9
 </body>
 
 </html>
