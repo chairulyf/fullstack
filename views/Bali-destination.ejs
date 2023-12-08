@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bali-destination</title>
     <link rel="stylesheet" href="../css/bali-destination.css">
+    <link rel="stylesheet" href="../css/query.css">
+    <script src="../js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="../js/index.js"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Alkalami&family=Caveat&family=Dancing+Script&family=Domine:wght@400;500&family=DynaPuff&family=Great+Vibes&family=Pacifico&family=Poppins:ital,wght@0,200;0,300;0,500;1,100&family=Roboto:wght@100&family=Sansita+Swashed:wght@300;400;500&family=Smooch&family=Smooch+Sans:wght@100&family=Viga&display=swap"
         rel="stylesheet">
@@ -17,18 +19,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!-- 2 -->
-    <!-- ------------------------------------------------------------------------------------------- -->
-    <!-- 3 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <!-- ------------------------------------------------------- -->
-    <!-- 4 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <!-- ----------------------------------------------- -->
 
     <!-- link box icon -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -42,7 +32,7 @@
 <body>
     <header class="header">
         <div class="button-back">
-            <button><a href="index"> Back Home </a></button>
+            <button><a href="index.html"> Back Home </a></button>
 
         </div>
         <div class="label-head">
@@ -51,30 +41,31 @@
         </div>
     </header>
 
-    <section class="About-traveling-kuy">
-        <div class="about">
-            <h1 class="Title">Bali<span> Island</span></h1>
-            <p>
-                The island of Bali is not just an ordinary tourist destination, but also a journey towards peace and
-                cultural depth. With stunning beach views, verdant green rice fields and majestic mountains, every
-                corner of this island holds stunning natural beauty.
-            </p>
-            <button>Learn More</button>
-        </div>
-    </section>
-    <section class="image-section">
-        <div class="image">
+
+    <!-- About -->
+    <section class="about">
+        <div class="content">
             <img src="../img/Destination/about.jpg" alt="">
+            <div class="text">
+                <h1>About Us</h1>
+                <h5>Bali Island</h5>
+                <p> 
+                    The island of Bali is not just an ordinary tourist destination, but also a journey towards peace and cultural depth. With stunning beach views, verdant green rice fields and majestic mountains, every corner of this island holds stunning natural beauty.
+                </p>
+                <button type="button" class="about-button"><a href="https://id.wikipedia.org/wiki/Bali" target="_blank">Learn More</a></button>
+            </div>
         </div>
     </section>
+    <!-- About -->
+
     <!-- ------------------------------------------GALLRY------------------------------------------ -->
     <section class="Gallry">
         <div class="container-gallry">
             <span class="subheading-gallry">DESTINATION </span>
             <h2 class="heading-gallry">
-                Bali island destination with <span>cultural and</span>
+                Bali island destination with <span>cultural and natural beauty</span>
             </h2>
-            <h2 class="heading-secondary-2"> natural beauty</h2>
+            <h2 class="heading-secondary-2"> </h2>
         </div>
         <div class="Gallry-about">
             <img src="../img/Destination/Untitled design.png" alt="">
@@ -82,11 +73,14 @@
     </section>
     <!-- ---------------------------------------------End Gallry-------------------------------------- -->
     <!----------------------------------------- Paket Traveling slide--------------------------------- -->
-    <section class="judul-paket-slide">
-        <span class="subheading-slide"> PAKET DESTINATION </span>
-        <h2 class="heading-slide">
-            Bali Island Destination Package <span>Nature Culture and Beach</span>
-        </h2>
+    <section class="Gallry">
+        <div class="container-gallry-slide">
+            <span class="subheading-gallry">DESTINATION </span>
+            <h2 class="heading-gallry">
+                Bali Island Destination Package <span>Nature Culture and Beach</span>
+            </h2>
+            <h2 class="heading-secondary-2"> </h2>
+        </div>
     </section>
     <section class="slide-paket">
         <div class="container-slide">
@@ -133,10 +127,9 @@
                 <span>includes Guide</span>
             </div>
             <div class="button-jumbtron">
-                <button><a href="Booking-hotel">Booking Now</a></button>
+                <button>Booking Now</button>
             </div>
         </div>
-
     </section>
     <!-----------------------------------------end  Paket Traveling slide--------------------------------- -->
     <!----------------------------------------------CARD BOOKING---------------------------------------- -->
@@ -144,12 +137,11 @@
 
     <div class="sesction-destination">
         <div class="container">
-            <span class="subheading">Let's go Start your traveling</span>
-            <h2 class="heading-secondary">Choose & Booking Your <span>Travel Package</span></h2>
+            <span class="subheading-gallry">Let's go Start your traveling</span>
+            <h2 class="heading-gallry">Choose & Booking Your <span>Travel Package</span></h2>
         </div>
 
         <div class="container grid grid--3-cols">
-
             <div class="destination">
                 <img src="../img/Destination/gitgit-twi.jpg" class="desti-img" alt="gambar" />
                 <div class="desti-content">
@@ -175,7 +167,7 @@
                             <span><strong>Guide</strong>includes Guide</span>
                         </li>
                     </ul>
-                    <button class="destination-button-1"><a href="Nature-bali">Learn More</a></button>
+                    <button class="destination-button-1"><a href="Nature-bali.html">Learn More</a></button>
                     <button class="destination-button"><a href="Booking-hotel">Booking Now</a></button>
                 </div>
             </div>
@@ -190,7 +182,7 @@
                     <ul class="desti-attributes">
                         <li class="desti-attribute">
                             <i class="ri-money-dollar-circle-line"></i>
-                            <span><strong>510.00</strong>USD</span>
+                            <span><strong>610.00</strong>USD</span>
                         </li>
                         <li class="desti-attribute">
                             <i class="ri-hotel-line"></i>
@@ -205,8 +197,8 @@
                             <span><strong>Guide</strong> includes Guide</span>
                         </li>
                     </ul>
-                    <button class="destination-button-1"><a href="Culture">Learn More</a></button>
-                    <button class="destination-button"><a href="Booking-hotel"> Booking Now</a></button>
+                    <button class="destination-button-1"><a href="Culture.html">Learn More</a></button>
+                    <button class="destination-button">Booking Now</button>
                 </div>
             </div>
 
@@ -220,7 +212,7 @@
                     <ul class="desti-attributes">
                         <li class="desti-attribute">
                             <i class="ri-money-dollar-circle-line"></i>
-                            <span><strong>410.00</strong>USD</span>
+                            <span><strong>470.00</strong>USD</span>
                         </li>
                         <li class="desti-attribute">
                             <i class="ri-hotel-line"></i>
@@ -235,17 +227,24 @@
                             <span><strong>Guide</strong> includes Guide</span>
                         </li>
                     </ul>
-                    <button class="destination-button-1"><a href="Beach-bali"> Learn More</a></button>
-                    <button class="destination-button"><a href="Booking-hotel"> Booking Now</a></button>
+                    <button class="destination-button-1"><a href="Beach-bali.html"> Learn More</a></button>
+                    <button class="destination-button">Booking Now</button>
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <p>copyright &copy;2023 Group-4 Section Surabaya</p>
-            <div class="social-icons">
-                <i class="ri-instagram-line"></i>
-                <i class="ri-facebook-circle-line"></i>
-                <i class="ri-whatsapp-line"></i>
+        <footer id="contak">
+            <div class="footer-content">
+                <h3>Traveling Kuy</h3>
+                <h3>Culture|Nature|Beach</h3>
+                <p>We are a dedicated travel team, committed to providing you with the best holiday experience. </p>
+                <ul class="social-icons">
+                  <i class="ri-instagram-line"></i>
+                  <i class="ri-facebook-circle-line"></i>
+                  <i class="ri-whatsapp-line"></i>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 Group-4</p>
             </div>
         </footer>
 </body>

@@ -73,4 +73,64 @@ describe("test login", ()=>{
         expect(result.body.token).toBeDefined()
         expect(result.body.token).not.toBe("test")
     });
+
+})
+
+describe("hai", ()=>{
+    it('should halo', async () => {
+        const data  = await prismaClient.contact.create({
+            // where:{
+            //     name_hotel : 'Hotel Serenity Palace'
+            // }
+            data :{
+                full_name : 'yusuf',
+                email : 'chairul@gmail.com',
+                phone : '089665263512',
+                id_destinastion : 'Hotel Serenity Palace'
+            },
+            include:{
+                destination : true
+            }
+        })
+        console.info(data)
+
+    });
+
+    it('should hai', async () => {
+        const data = await prismaClient.contact.findUnique({
+            where:{
+                id : 2
+            },
+            include :{
+                destination: 'Hotel Serenity Palace'
+
+            }
+        })
+        console.info(data)
+        return data
+    });
+
+    it('should update', async () => {
+        const update = await prismaClient.destination.update({
+            where:{
+                name_hotel:'Hotel Serenity Palace'
+            },
+            data:{
+                destination_price : "$510.00 USD"
+            }
+        })
+    });
+    it('should create data', async () => {
+        const update = await prismaClient.destination.create({
+            data :{
+                name_hotel : 'Hotel Serenity Palace',
+                hotel_addres : 'Canggu, Denpasar',
+                guide_name : 'Jhon Doe',
+                price : '$200',
+                vehicle_name : 'AVP CAR',
+                destination_price : '$510.00 USD',
+                police_number : 'B 1234 NDC'
+            }
+        })
+    });
 })

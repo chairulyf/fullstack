@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking-Now</title>
+    <link rel="stylesheet" href="../css/booking-now.css">
+    <script src="../js/Booking.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/query.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkalami&family=Caveat&family=Dancing+Script&family=Domine:wght@400;500&family=DynaPuff&family=Great+Vibes&family=Pacifico&family=Poppins:ital,wght@0,200;0,300;0,500;1,100&family=Roboto:wght@100&family=Sansita+Swashed:wght@300;400;500&family=Smooch&family=Smooch+Sans:wght@100&family=Viga&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="button-back">
+            <button><a href="Bali-destination.html"> Back Home </a></button>
+        </div>
+        <div class="label-head">
+            <h3>Booking Now</h3>
+            <p>Booking Now to your choice</p>
+        </div>
+    </header>
+
+    <section class="form-input-book">
+        <div class="container">
+            <header>Booking Form</header>
+            <form action="invoice" class="form" onsubmit="printInvoice(); return false;">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" id="full_name" placeholder="Enter full name" required />
+                </div>
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="text" id="email" placeholder="Enter email address" required />
+                </div>
+                <div class="column">
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input type="text" id="phone" placeholder="Enter phone number" required />
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-box">
+                        <label>ID Number Hotel</label>
+                        <input type="text" id="id" placeholder="Enter id number hotel" readonly />
+                    </div>
+                </div>
+                <div class="input-box address">
+                    <label>Booking Details</label>
+                    <input type="text" id="id_destination" value="Hotel Serenity Palace" placeholder="Hotel Name"  required readonly/>
+                    <input type="text" type="text" id="hotelAddress" value="Canggu, Denpasar" readonly />
+                    <input type="text" id="guideName" value="Jhon Doe" readonly />
+                    <input type="text" id="guidePrice" value="$200" readonly />
+                    <div class="column">
+                        <input type="text" id="vehicleName" value="AVP CAR" readonly />
+                        <input type="text" id="policeNumber" value="B 1234 BCD" readonly />
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>Destination Price</label>
+                    <input type="text" id="destinationPrice" value="$510.00 USD" readonly />
+                </div>
+                <div class="form-submit-btn">
+                    <button type="submit" onclick="kirimData()">Request To Book</button>
+                </div>
+            </form>
+        </div>
+    </section> 
+
+    <footer id="contak">
+        <div class="footer-content">
+            <h3>Traveling Kuy</h3>
+            <h3>Culture|Nature|Beach</h3>
+            <p>We are a dedicated travel team, committed to providing you with the best holiday experience. </p>
+            <ul class="social-icons">
+                <i class="ri-instagram-line"></i>
+                <i class="ri-facebook-circle-line"></i>
+                <i class="ri-whatsapp-line"></i>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 Group-4</p>
+        </div>
+    </footer>
+    <script>
+        function kirimData() {
+            const id = document.getElementById('id').value;
+            const full_name = document.getElementById('full_name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const id_destination = document.getElementById('id_destination').value;
+
+            const data = { id, full_name, email, phone, id_destination };
+
+            // Kirim data ke server menggunakan Fetch API
+            fetch('/api/users/booking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(result => {
+                    console.log('Respon dari server:', result);
+                    // Handle respon dari server sesuai kebutuhan
+                }).catch(error => {
+                    console.error('Gagal mengirim data:', error);
+                    // Handle kesalahan sesuai kebutuhan
+                });
+            // Tambahkan field lain sesuai kebutuhan
+            if (id) {
+                // Buka halaman invoice
+                // window.location.href = `/invoice/${id}`;
+                window.open(`/invoice/${id}`, '_blank');
+            } else {
+                console.error('ID booking tidak valid atau tidak ditemukan.');
+                // Handle kesalahan atau berikan pesan kepada pengguna
+            }
+        }
+    </script>
+
+    <script >
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to generate a random Booking ID
+            function generateBookingId() {
+                // You can customize the logic for generating the Booking ID as needed
+                return 'BK' + Math.floor(Math.random() * 1000);
+            }
+
+            // Get the input element by its ID
+            var bookingIdInput = document.getElementById('id');
+
+            // Generate and set the Booking ID when the page loads
+            bookingIdInput.value = generateBookingId();
+        });
+    </script>
+
+
+   
+</body>
+
+</html>

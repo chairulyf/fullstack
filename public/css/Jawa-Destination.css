@@ -1,35 +1,31 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+
+body{ 
     background-color: #D8D5D5;
     font-family: 'Poppins', sans-serif;
+    overflow-x:hidden;
 }
 
 .header{
-    padding: 0px;
-    background-color: transparent;   
-    background-image:url(../img/jateng.jpg);
-    background-size: 100% auto;
-    background-position: right center;
-    background-repeat: no-repeat;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-.header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%; /* Tinggi garis bawah yang akan diubah opasitasnya */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(237, 237, 237)); /* Gradient transparan ke putih */
-}
+  background-image:url(../img/Paket-desti-jawa/Borobudur\,\ Nature\ Magelang\ Central\ Jawa.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+} 
+
 .button-back{
-    padding: 15px;
+    padding: 10px;
+    margin-top: -80px; 
 }
 
 .button-back button{
@@ -43,6 +39,7 @@ body{
     border: none;
     font-size: 15px;
     font-weight: 600;
+    
 }
 .button-back button:hover{
     opacity: 50%;
@@ -56,94 +53,101 @@ color: #ffffff;
 font-family: 'Poppins', sans-serif;
 cursor: pointer;
 border: none;
-margin-top: 200px;
-opacity: 60%;
-margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
-/* font-size: 40px; */
+margin-top: 100px;
+opacity: 70%;
+margin-right: 0; 
 }
 
 
 
 /* ABout */
-.About-traveling-kuy{
-    margin-top: 250px;
-}
-  .about{
-    margin: 169px 270px ;
-    opacity: 0.9;
-    width: 600px;
-    height: 390px;
-    padding: 10px 30px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
 
-    
-}
-
-.Title{
-    font-family:'Poppins', sans-serif;
-    color: #182F52;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.Title span{
-    color: orange;
-}
-
-.content h1{
-    font-family:'Poppins', sans-serif;
-    font-size: 20px;
-}
-
-.about p{
-    font-family: 'Poppins', sans-serif;
-    text-align: justify;
-    color:#3E3D44;
-}
-
-.about button{
+.about{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color:#255A65;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-.about button:hover{
-    cursor: pointer;
-    opacity: 50%;
-}
-
-.image-section {
-    display: flex;
-    justify-content: flex-end;
-    
-}
-
-.image img {
+    align-items: center;
+  }
+  
+  
+  .about .content img{
     width: 320px;
     height: 300px;
-    border-radius: 10px;
-    justify-content: flex-start;
-    margin: 20px 300px 0; 
-    transform: translateY(-593px);
-}
+    max-width: 100%;
+    margin: 0 80px; 
+    border-radius: 5px;
+  }
+  
+  .text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .content{
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  
+  .text h1{
+    color: orange;
+    font-size: 55px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  
+  .text h5{
+    color: rgb(40, 40, 80);
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+  
+  .text p{
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .about-button{
+    background-color: #255A65;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px 0px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .about-button a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+
 
 /* end About */
 .Gallry{
     padding: 9.6rem 0;
-}
+} 
+
 
 .container-gallry{
     max-width: 120rem;
     padding: 0 2.2rem;
     margin: 0 90px;
-    margin-top: -550px;
+    /* margin-top: -550px; */
 }
 .heading-gallry{
     font-size: 2.7rem;
@@ -166,6 +170,7 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
     text-transform: uppercase;
     margin-bottom: 0.7rem;
 }
+
 
 .label-head h3{
     font-size: 40px;
@@ -192,6 +197,218 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
 
 
 /* end */
+
+/* start slide img paket */
+
+.Gallry{
+    padding: 9.6rem 0;
+} 
+
+.container-gallry-slide {
+    max-width: 120rem;
+    padding: 0 2.2rem;
+    margin: 0 90px;
+    margin-top: -190px;
+    
+}
+
+.container-slide{
+    max-width: 120rem;
+    padding: 0 2.2rem;
+    margin: 0 90px;
+    /* margin-top: -550px; */
+}
+.heading-slide{
+    font-size: 2.7rem;
+    color: #182F52;
+}
+.heading-slide span{
+    color:#cf711f;
+}
+.heading-secondary-2{
+    font-size: 2.7rem;
+    color:#cf711f;
+    
+}
+
+.subheading-slide{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+}
+
+
+.slide-paket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: -220px;
+}
+.container-slide{
+    max-width: 1200px;
+    width: 95%;
+}
+
+ 
+.slide-wrapper .image-list{ 
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 18px;
+    font-size: 0;
+    overflow-x:auto ;
+    scrollbar-width: none;
+    margin-bottom: 30px;
+}
+
+.slide-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+.slide-wrapper .image-list .image-item{
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container .slider-scrol{
+    height: 24px;
+    width: 100%;
+    /* background: orange; */
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrol .scrolbar-track{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+
+.slider-scrol:hover .scrolbar-track{
+    height: 4px;
+}
+
+.slider-scrol .scrolbar-track:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrol .scrolbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    background: #000;
+    cursor: grab;
+}
+
+.slider-scrol .scrolbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.slide-wrapper i{
+    font-size: 34px;
+    height: 50px;
+    width: 50px;
+    outline: none;
+    color: rgb(20, 55, 93);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slide-wrapper i:hover{
+    color: bisque;
+}
+
+.slide-wrapper{
+    position: relative;
+}
+
+.slide-wrapper i#prev-slide{
+    left: -25px;
+    display: none;
+}
+
+.slide-wrapper i#next-slide{
+    right: -40px;
+}
+
+
+/* end slide pkaet */
+
+/*------------------------------- Start Jumbotron Paket -------------------------- */
+.jumbotrun-section {
+    text-align: center;
+  }
+  
+  .jumbotrun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:  #255A65;
+    opacity: 95%;
+    transform: translateY(-50px);
+    width: 85%;
+    height: 100px;
+    border-radius: 10px;
+    margin: auto;
+    /* margin-top: 180px; */
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-right: 50px;
+  }
+  
+  .icon-container i {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #cf711f;
+    font-weight: 800;
+  }
+  
+  .icon-container span {
+    font-size: 14px;
+    color: rgb(221, 218, 214);
+    font-family:'Poppins', sans-serif;
+  }
+
+  .button-jumbtron button{
+    /* display: flex;
+    justify-content: center; */
+    padding: 15px 20px;
+    /* margin-top: 10px; */
+    background-color: #cf711f;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .button-jumbtron button:hover{
+    background-color: #182F52;
+  }
+/* ------------------------------ Ens Jumbotron Paket ---------------------------- */
 .container{
     max-width: 120rem;
     padding: 0 3.2rem;
@@ -199,7 +416,7 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
 }
 .grid{
     display: grid;
-    gap: 9.6rem;
+    gap: 6.6rem;
 }
 
 .grid--2-cols{
@@ -210,13 +427,10 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* .grid--4-cols{
-    grid-template-columns: repeat(4, 1fr);
-} */
+
 
 .heading-secondary{
     font-size: 2.5rem;
-    /* line-height: normal; */
     margin-bottom: 3rem;
     color: #182F52;
 }
@@ -235,16 +449,16 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
 
 .section-destination {
     padding: 9.6rem 0;
-    /* margin-bottom: 30px; */
   }
   
   .destination {
     border-radius: 11px;
     overflow: hidden;
     transition: all 0.4s;
-    height: auto;
     border: none;
-    
+    width: 300px;
+    margin-top: 30px ;
+        
   }
   
   .destination:hover {
@@ -254,7 +468,7 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
   
   .desti-content {
     padding: 1.2rem ;
-    height:310px;
+    height:340px;
     background: #F3F3F3;
     margin-top: -20px;
     position: relative;
@@ -305,19 +519,20 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
     
   }
   .button-card{
-    width: 90px; /* Menentukan lebar elemen */
-    padding: 7px; /* Menentukan padding */
+    width: 90px; 
+    padding: 7px; 
     border-radius: 5px 0 5px;
     background-color: #255A65;
     color: #ffffff;
     font-family:'Poppins', sans-serif ;
     cursor: pointer;
     border: none;
-   /*  position: absolute; */
     display: flex;
     align-items: center;
 
 }
+
+
 
 .desti-attribute i{
     font-size: 25px;
@@ -341,6 +556,11 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
     position: absolute;
     cursor: pointer;
 }
+
+.destination-button a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .destination-button-1 {
     padding: 10px ;
     margin-top: 20px;
@@ -349,7 +569,6 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
     border-radius: 5px;
     border: none;
     font-family: 'Poppins', sans-serif;
-    /* right: 20px; */
     position: absolute;
     cursor: pointer;
 }
@@ -372,248 +591,224 @@ margin-right: 0; /* Elemen akan mepet ke kanan sepenuhnya */
 }
 
 /* footer */
-.footer{
-    margin-top: 90px;
-    background-color: #255A65;
-    width: 100vw;
-    height: 140px;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer p{
-    margin-top:20px;
-    font-size: 15px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-    color: orange;
-}
 
-.social-icons{
-    margin-top: 19px;
+footer{
+    background-color: #084c57;
+    margin-top: 80px;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins',  sans-serif;
+    padding-top: 40px;
+    color: aliceblue;
+  }
+  
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    font-weight: 500;
+  }
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  
+  .social-icons{
+    margin-top: 10px;
     font-size: 30px;
     
-}
-
-.social-icons i{
+  }
+  
+  .social-icons i{
     margin-right: 20px;
     margin-left: 20px;
     color: #cf711f;
-}
+  }
+  .footer-bottom{
+    background-color: #182F52;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .footer-bottom p{
+    font-size: 14px; 
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #cf711f;
+  } 
 /* end footer */
 
-/* ------------------------------------------------------Style Css Nature Bali------------------------------------------- */
+/* ------------------------------------------------------Style Css Nature jawa------------------------------------------- */
 .header-nature{
-    padding: 0px;
-    background-color: transparent;   
+  
     background-image:url(../img/Paket-desti-jawa/Baluran\ Forest\,\ Nature\ Situbondo\ East\ Jawa.jpg);
-    background-size: 100% auto;
-    background-position: right center;
-    background-repeat: no-repeat;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-.header-nature::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 10%; /* Tinggi garis bawah yang akan diubah opasitasnya */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255)); /* Gradient transparan ke putih */
-
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  
+}
+.Destination-gallry-jawa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-
-.container-nature{
-     /* max-width: 120rem; */
-    padding: 0 4.2rem;
-    margin-top: 120px;
-    /* margin: 0 90px;  */
+.container-gallry-jawa{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
 }
 
-.heading-nature{
-    font-size: 2.5rem;
-    /* line-height: normal; */
-    margin-bottom: 3rem;
-    color: #182F52;
-}
-.heading-nature span{
-    color: #cf711f;
-}
-.subheading-nature{
-    display: block;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #cf711f;
-    margin-bottom: 0.3rem;
-    
-}
-
-/* Strat Gallry */
-.Gallray-destination {
+.container-gallry-jawa .card-gallry-jawa{
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 49px;
-    padding: 0 1rem;
- 
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px  rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
 }
 
-.Gallry-img {
-    position: relative; 
-    width: 30%;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    padding: 0;
-    display: inline-block;
-    /*  */
+.container-gallry-jawa .card-gallry-jawa:hover{
+  height: 400px;
 }
 
-.Gallry-img img {
-    display: block;
-    margin: 0;
-    width: 80%;
-    height: 100%;
-    border-radius: 3%;
-    margin-left: 20px;
-}
-
-
-.name-desti {
+.container-gallry-jawa .card-gallry-jawa .img{
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 130px;
-    padding: 5px;
-    border-radius: 5px 0 0 5px ;
-    background-color: #255A65;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    border: none;
-    margin-bottom: 80px;
-    left: 220px;
-    opacity: 80%;
-    text-align: center;
-
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #3333;
+    border-radius: 12px;
+     overflow: hidden;
+    transition: 0.5s;
+   
 }
+.container-gallry-jawa .card-gallry-jawa:hover .img{
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.container-gallry-jawa .card-gallry-jawa .img img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-gallry-jawa .card-gallry-jawa .content{
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  padding: 0 30px;
+  height: 35px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+  color: #182F52;
+}
+
+.container-gallry-jawa .card-gallry-jawa:hover  .content{
+  top: 110px;
+  height: 280px ;
+}
+.button-card-desti-jawa {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #255A65;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: #cf711f;
+}
+
+.container-nature .card-nature .content h2{
+  color: #084c57;
+}
+
+.container-nature .card-nature .content p{
+  text-align: justify;
+}
+
+.button-card-desti-jawa:hover {
+  background-color: #e69500;
+}
+
+.button-card-desti-jawa a{
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Poppins' sans-serif;
+}
+
 
 .button-back a{
     text-decoration: none;
     color: #ffffff;
 }
 
-.button-desti {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 90px;
-    padding: 7px;
-    border-radius: 5px 0 5px;
-    background-color: #255A65;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    border: none;
-    left: 257px;
-   margin-top: 120px;
-
-}
-
-.button-desti:hover{
-    background-color: #cf711f;
-}
-
-/* ---------------------------------------------------end Style Css Nature Bali----------------------------------------*/
+/* ---------------------------------------------------end Style Css Nature jawa----------------------------------------*/
 
 
-/* ---------------------------------------------------Strat Style Css Culture Bali------------------------------------- */
+/* ---------------------------------------------------Strat Style Css Culture jawa------------------------------------- */
 
 
 .header-Culture{
-    padding: 0px;
-    background-color: transparent;   
-    background-image:url(../img/Paket-desti-jawa/Borobudur\,\ Nature\ Magelang\ Central\ Jawa.jpg);
-    background-size: 100% auto;
-    background-position: right center;
-    background-repeat: no-repeat;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-.header-Culture::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%; /* Tinggi garis bawah yang akan diubah opasitasnya */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255)); /* Gradient transparan ke putih */
-
-}
-
-.name-desti-Tirta-empul {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 160px;
-    padding: 5px;
-    border-radius: 5px 0 0 5px ;
-    background-color: #255A65;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    border: none;
-    margin-bottom: 80px;
-    left: 190px;
-    opacity: 80%;
-    text-align: center;
+  
+  background-image:url(../img/Paket-desti-jawa/Borobudur\,\ Nature\ Magelang\ Central\ Jawa.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
 
 }
 
 
-/* ---------------------------------------------------End Style Css Culture Bali------------------------------------- */
+
+
+
+/* ---------------------------------------------------End Style Css Culture jawa------------------------------------- */
 
 
 
 .header-beach{
-    padding: 0px;
-    background-color: transparent;   
-    background-image:url(../img/Paket-desti-jawa/Batu\ Bengkung\ Island\,\ Beach\ Malang\ East\ Jawa.jpg);
-    background-size: 100% auto;
-    background-position: right center;
-    background-repeat: no-repeat;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-.header-Culture::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%; /* Tinggi garis bawah yang akan diubah opasitasnya */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255)); /* Gradient transparan ke putih */
-
-}
-
-.name-desti {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 180px;
-    padding: 5px;
-    border-radius: 5px 0 0 5px ;
-    background-color: #255A65;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    border: none;
-    margin-bottom: 80px;
-    left: 170px;
-    opacity: 80%;
-    text-align: center;
-
+  background-image: url(../img/Paket-desti-jawa/pantai\ siung.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
 }

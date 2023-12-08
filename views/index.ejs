@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Traveling Kuy</title>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/nav.js"></script>
+  <link rel="stylesheet" href="../css/query.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -28,41 +30,43 @@
 
 <body>
   <!-- Strat Navbar -->
-  <header class="header">
-    <div class="logo">
-      <h3>Traveling <span>Kuy</span></h3>
+  <nav>
+    <div class="logo"><a href="#">Traveling <span>Kuy</span></a></div>
+    <ul class="link">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about-landig-page">About Us</a></li>
+      <li><a href="#destination">Destinations</a></li>
+      <li><a href="#destination">Booking</a></li>
+      <li><a href="#contak">Contact</a></li>
+    </ul>
+    <div class="main">
+      <a href="login" class="user">Sign In</a>
+      <a href="sign-up">Register</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
     </div>
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#">Home</a></li>
-        <li><a class="main-nav-link" href="#">About Us</a></li>
-        <li><a class="main-nav-link" href="#">Destinations</a></li>
-        <li><a class="main-nav-link" href="#">Booking</a></li>
-        <li><a class="main-nav-link" href="#">Contact</a></li>
-        <li><a class="main-nav-link nav-cta" href="/login">Login</a></li>
-        <li><a class="main-nav-link nav-cta" href="/sign-up">Sign-up</a></li>
-      </ul>
-    </nav>
-  </header>
+  </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Make Your Tour Amazing With Us</h1>
+      <p>Travel to any corner of the world without going in circles with Traveling Kuy</p>
+    </div>
+  </section>
   <!-- end Navbar -->
 
 
   <!-- Strat Search Engine -->
   <section class="section-info-panel">
     <div class="info-panel">
-      <div class="destination">
+      <div class="destination-key">
         <label for="keterangan" class="ket-panel">Destination</label> <br>
-        <input type="text" id="keterangan" name="keterangan" value="Enter Keywords" placeholder="Enter Keywords"
-          class="option-type">
+        <input type="text" id="keterangan" name="keterangan" placeholder="Enter Keywords" class="option-type">
       </div>
       <div class="type-destination">
         <label class="ket-panel">Type</label> <br>
         <select id="dropdown" name="fruit">
-          <option value="Advanture" class="option-type">Advanture</option>
           <option value="Culture" class="option-type">Culture</option>
           <option value="Nature" class="option-type">Nature</option>
           <option value="Beac" class="option-type">Beach</option>
-          <option value="Mount" class="option-type">Mount</option>
         </select>
       </div>
       <div class="when-destination">
@@ -76,58 +80,27 @@
         </button>
       </form>
     </div>
-  </section> 
+  </section>
   <!-- End Search engine  -->
 
   <!-- start about -->
-  <section class="About-traveling-kuy">
-    <div class="about">
-      <h1 class="Title">Traveling <span>Kuy</span></h1>
-      <p>
-        We are a dedicated travel team, committed to providing you with the best holiday experience. With our
-        local knowledge, travel tips, and recommendations, our travel website is a trusted source of information
-        to make your trip unforgettable. Welcome to our adventurous world!
-      </p>
-      <button>Learn More</button>
-    </div>
-  </section>
-  <section class="image-section">
-    <div class="image">
+  <section class="about" id="about-landig-page">
+    <div class="content">
       <img src="../img/about.jpg" alt="">
+      <div class="text">
+        <h1>About Us</h1>
+        <h5>Traveling Kuy</h5>
+        <p> We are a dedicated travel team, committed to providing you with the best holiday experience. With
+          our local knowledge travel tips and recommendations our travel website is a trusted source of
+          information to make your trip unforgettable. Welcome to our adventurous world!
+        </p>
+        <button type="button" class="about-button">Learn More</button>
+      </div>
     </div>
   </section>
   <!-- end about -->
-
-  <!-- strat chouse-us -->
-
-  <section class="service">
-    <div class="container">
-      <div class="title">
-        <h3>WHY CHOOSE US ?</h3>
-      </div>
-
-      <div class="features">
-        <div class="feature">
-          <div class="container-icon"><i class="ri-road-map-line"></i></div>
-          <p class="feature-title">Diverse Destination</p>
-        </div>
-        <div class="feature">
-          <div class="container-icon"><i class="ri-suitcase-3-line"></i></div>
-          <p class="feature-title">Passionate Travel</p>
-        </div>
-        <div class="feature">
-          <div class="container-icon"> <i class="ri-money-dollar-circle-line"></i></div>
-          <p class="feature-title">Best Price Guaranteed</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- emd chouse-us -->
-  <br>
   <!-- Popular destination -->
-  <div class="sesction-destination">
+  <div class="sesction-destination" id="destination">
     <div class="container">
       <span class="subheading">POPULAR DESTINATION</span>
       <h2 class="heading-secondary">
@@ -153,10 +126,10 @@
             </li>
             <li class="desti-attribute">
               <i class="ri-pin-distance-line"></i>
-              <span><strong>50 ++</strong>Destination</span>
+              <span><strong>70 ++</strong>Destination</span>
             </li>
           </ul>
-          <div class="button-card"><a href="bali-destination">Learn more</a></div>
+          <div class="button-card"><a href="Bali-destination">Learn more</a></div>
         </div>
       </div>
 
@@ -166,22 +139,22 @@
           <div class="desti-tags">
             <span>Lombok</span>
           </div>
-          <p class="desti-title">Traveling Beach</p>
+          <p class="desti-title">Nature Traveling</p>
           <ul class="desti-attributes">
             <li class="desti-attribute">
               <i class="ri-group-line"></i>
-              <span><strong>678/</strong>Month Traveler Visit</span>
+              <span><strong>578/</strong>Month Traveler Visit</span>
             </li>
             <li class="desti-attribute">
               <i class="ri-bard-line"></i>
-              <span><strong>4.8</strong> Rating (678)</span>
+              <span><strong>4.7</strong> Rating (578)</span>
             </li>
             <li class="desti-attribute">
               <i class="ri-pin-distance-line"></i>
-              <span><strong>50 ++</strong>Destination</span>
+              <span><strong>60 ++</strong>Destination</span>
             </li>
           </ul>
-          <div class="button-card"><a href="Lombok-destination">Learn more</a></div>
+          <div class="button-card"><a href="Lombok-destination.html">Learn more</a></div>
         </div>
       </div>
 
@@ -195,165 +168,215 @@
           <ul class="desti-attributes">
             <li class="desti-attribute">
               <i class="ri-group-line"></i>
-              <span><strong>678/</strong>Month Traveler Visit</span> 
+              <span><strong>478/</strong>Month Traveler Visit</span>
             </li>
             <li class="desti-attribute">
               <i class="ri-bard-line"></i>
-              <span><strong>4.8</strong> Rating (678)</span>
+              <span><strong>4.8</strong> Rating (478)</span>
             </li>
             <li class="desti-attribute">
               <i class="ri-pin-distance-line"></i>
               <span><strong>50 ++</strong>Destination</span>
             </li>
           </ul>
-          <div class="button-card"><a href="Jawa-destination">Learn more</a></div>
+          <div class="button-card"><a href="Jawa-destination.html">Learn more</a></div>
         </div>
       </div>
     </div>
     <!-- end Destination -->
 
     <!-- Gallray Destination -->
-    <section class="Gallray-destination">
-      <div class="Gallry-img">
-        <img src="../img/Pulau Pudar.jpg" alt="">
-        <div class="name-desti">Pulau Padar</div>
-        <div class="button-desti">Learn More</div>
-      </div>
+    <div class="container-title-gallry">
+      <h2 class="heading-secondary-gallry">
+        DESTINATION FAVORIT ON TRAVELING KUY
+      </h2>
+    </div>
+    <section class="Destination-gallry-home">
+      <div class="container-gallry-home">
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Paket-desti-jawa/Bromo, Nature East Jawa.jpg" alt="kuta">
+          </div>
+          <div class="content">
+            <h2>Mount Bromo</h2>
+          </div>
+        </div>
 
-      <div class="Gallry-img">
-        <img src="../img/Laboan Bajo.jpg" alt="">
-        <div class="name-desti">Laboan Bajo</div>
-        <div class="button-desti">Learn More</div>
-      </div>
-      <div class="Gallry-img">
-        <img src="../img/Bromo.jpg" alt="">
-        <div class="container-name"></div>
-        <div class="name-desti">Bromo</div>
-        <div class="button-desti">Learn More</div>
-      </div>
-      <div class="Gallry-img"> 
-        <img src="../img/Raja empat.jpg" alt="">
-        <div class="name-desti">Raja Ampat</div>
-        <div class="button-desti">Learn More</div>
-      </div>
-      <div class="Gallry-img">
-        <img src="../img/Gunung ijen.jpg" alt="">
-        <div class="name-desti">Gunung Ijen</div>
-        <div class="button-desti">Learn More</div>
-      </div>
-      <div class="Gallry-img">
-        <img src="../img/Pulau Komodo.jpg" alt="">
-        <div class="name-desti">Pulau Komodo</div>
-        <div class="button-desti">Learn More</div>
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Destination/Bias tugel.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Bias Tugel Beach</h2>
+          </div>
+        </div>
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Destination/Balangan.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Balangan Beach</h2>
+          </div>
+        </div>
+
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Destination/uluwatu.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Uluwatu Temple</h2>
+          </div>
+        </div>
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Paket-desti-lombok/Pink Beach, Beach East Lombok.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Pink Beach</h2>
+          </div>
+        </div>
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Destination/gitgit-twi.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Gitgit Waterfall</h2>
+          </div>
+        </div>
+
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Paket-desti-jawa/Borobudur, Nature Magelang Central Jawa.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Borobudur</h2>
+          </div>
+        </div>
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Paket-desti-jawa/Batu Bengkung Island, Beach Malang East Jawa.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Batu Bengkung Beach</h2>
+          </div>
+        </div>
+
+        <div class="card-gallry-home">
+          <div class="img">
+            <img src="../img/Paket-desti-jawa/Baluran Forest, Nature Situbondo East Jawa.jpg" alt="">
+          </div>
+          <div class="content">
+            <h2>Baluran Forest</h2>
+          </div>
+        </div>
+
+
       </div>
     </section>
-    <!-- end Gallry -->
     <!-- strat testimonial -->
-    <section class="section-testimonials">
-      <div class="testimonials-container">
-        <span class="subheading-testi">Testimonials</span>
-        <h2 class="heading-secondary-testi">Once you try it, you can't <span> go back</span></h2>
-        <div class="testimonials">
-          <figure class="testimonial">
-            <img class="testimonial-img" alt="Photo of customer Dave Bryson" src="../img/customers/dave.jpg" />
-            <blockquote class="testimonial-text">
-              Thank you Traveling Kuy for a great travel experience! I was really impressed with the local knowledge and
-              friendly guide.
-            </blockquote>
-            <p class="testimonial-name">&mdash;Jhon</p>
-          </figure>
-
-          <figure class="testimonial">
-            <img class="testimonial-img" alt="Photo of customer Ben Hadley" src="../img/customers/customer-6.jpg" />
-            <blockquote class="testimonial-text">
-              I am very satisfied with my traveling experience with Traveling Kuy. They provide very professional
-              service!
-            </blockquote>
-            <p class="testimonial-name">&mdash; Maria</p>
-          </figure>
-
-          <figure class="testimonial">
-            <img class="testimonial-img" alt="Photo of customer Steve Miller" src="../img/customers/steve.jpg" />
-            <blockquote class="testimonial-text">
-              My experience with Traveling Kuy was very impressive. They not only provided a comfortable trip but also
-              provided deep insight into the culture and history of each place we visited.
-            </blockquote>
-            <p class="testimonial-name">&mdash; Steve Miller</p>
-          </figure>
-
-          <figure class="testimonial">
-            <img class="testimonial-img" alt="Photo of customer Hannah Smith" src="../img/customers/customer-3.jpg" />
-            <blockquote class="testimonial-text">
-              I am very happy to have chosen Traveling Kuy for my trip. They arranged everything perfectly, from
-              accommodation to transportation.
-            </blockquote>
-            <p class="testimonial-name">&mdash; Hannah Smith</p>
-          </figure>
+    <header>
+      <div class="container-testi">
+        <div class="container__left">
+          <h5>Testimonial</h5>
+          <h1>Once you try it, you can't <span>go back</span></h1>
+          <p>
+            More than hundreds of travelers from various backgrounds have entrusted their trips to Traveling Kuy, and
+            the results have been extraordinary. As a leading travel service provider, we have transformed their travel
+            experience into an unforgettable adventure.
+          </p>
+        </div>
+        <div class="container__right">
+          <div class="card-testi">
+            <img src="../img/customers/customer-1.jpg" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  I am very satisfied with my traveling experience with Traveling Kuy. They provide very professional
+                  service!
+                </p>
+                <h4>- Maria</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-testi">
+            <img src="../img/customers/customer-3.jpg" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Thank you Traveling Kuy for a great travel experience! I was really impressed with the local knowledge
+                  and friendly guide.
+                </p>
+                <h4>- Riana</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-testi">
+            <img src="../img/customers/customer-4.jpg" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  I am very happy to have chosen Traveling Kuy for my trip. They arranged everything perfectly, from
+                  accommodation to transportation.
+                </p>
+                <h4>- Stacy Stone</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="gallery">
-        <figure class="gallery-item">
-          <img src="../img/testimoni/Pulau Pudar.jpg" alt="Pulau Pudar" />
-          <!-- <figcaption>Caption</figcaption> -->
-        </figure>
-        <figure class="gallery-item">
-          <img src="../img/testimoni/Lombok.jpg" alt="Lombok" />
-        </figure>
-        <figure class="gallery-item">
-          <img src="../img/testimoni/air terjun.jpg" alt="Air terjun" />
-        </figure>
-        <figure class="gallery-item">
-          <img src="../img/testimoni/Pulau Komodo.jpg" alt="Pulau Komodo" />
-        </figure>
-        <figure class="gallery-item">
-          <img src="../img/testimoni/Gunung ijen.jpg" alt="Gunung ijen" />
-        </figure>
-        <figure class="gallery-item">
-          <img src="../img/testimoni/Laboan Bajo.jpg" alt="laboan Bajo" />
-        </figure>
-
-      </div>
-    </section>
+    </header>
     <!-- end testimonial -->
 
 
     <!-- start form feedback-->
-
-    <section class="section-cta">
-      <div class="container">
-        <div class="cta">
-          <div class="cta-text-box">
-            <h2 class="heading-secondary">Give your testimony for traveling kuy</h2>
-            <p class="cta-text">
-              Share your experiences when traveling with traveling kuy every step of the journey brings positive surprises that make this experience even more special.
-            </p>
-
-            <form class="cta-form" action="#">
-              <div>
-                <label for="full-name">Full Name</label>
-                <input id="full-name" type="text" placeholder="John Smith" required />
-              </div>
-
-              <div>
-                <label for="email">Email address</label>
-                <input id="email" type="email" placeholder="me@example.com" required />
-              </div>
-
-              <div>
-                <label for="textarea">Input Your  Experiences</label>
-                <textarea name="" id="textarea" cols="30" rows="10"></textarea>
-              </div>
-
-              <button class="btn btn--form">Submit</button>
-            </form>
+    <section class="form-feadback">
+      <div class="container-fead">
+        <div class="card-container">
+          <div class="left">
+            <div class="left-container">
+              <h2>Give your testimony for traveling kuy</h2>
+              <p>Share your experiences when traveling with traveling kuy every step of the journey brings positive </p>
+            </div>
           </div>
-          <div class="cta-img-box" role="img" aria-label="Woman enjoying"></div>
+          <div class="right">
+            <div class="right-container">
+              <form action="">
+                <h2 class="Title-feadback">Traveling <span> Kuy</span></h2>
+                <input type="text" placeholder="Name" class="inpt">
+                <input type="email" placeholder="Your Email" class="inpt">
+                <textarea rows="10" placeholder="Testimony"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- end form feedback -->
-  </div>
+    <footer id="contak">
+      <div class="footer-content">
+        <h3>Traveling Kuy</h3>
+        <h3>Culture|Nature|Beach</h3>
+        <p>We are a dedicated travel team, committed to providing you with the best holiday experience. </p>
+        <ul class="social-icons">
+          <i class="ri-instagram-line"></i>
+          <i class="ri-facebook-circle-line"></i>
+          <i class="ri-whatsapp-line"></i>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2023 Group-4</p>
+      </div>
+    </footer>
 </body>
 
 </html>

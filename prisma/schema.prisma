@@ -11,24 +11,21 @@ datasource db {
 }
 
 model User {
-  username String    @id @db.VarChar(100)
-  password String    @db.VarChar(100)
-  name     String    @db.VarChar(100)
-  token    String?   @db.VarChar(100)
-  contacts Contact[]
+  username String  @id @db.VarChar(100)
+  password String  @db.VarChar(100)
+  name     String  @db.VarChar(100)
+  token    String? @db.VarChar(100)
 
   @@map("users")
 }
 
 model Contact {
-  id         Int       @id @default(autoincrement())
-  first_name String    @db.VarChar(100)
-  last_name  String?   @db.VarChar(100)
-  email      String?   @db.VarChar(200)
-  phone      String?   @db.VarChar(20)
-  username   String    @db.VarChar(100)
-  user       User      @relation(fields: [username], references: [username])
-  addresses  Address[]
+  id              String      @id
+  full_name       String      @db.VarChar(100)
+  email           String?     @db.VarChar(200)
+  phone           String?     @db.VarChar(20)
+  id_destinastion String
+  destination     Destination @relation(fields: [id_destinastion], references: [name_hotel])
 
   @@map("contacts")
 }
@@ -41,14 +38,19 @@ model Address {
   country        String  @db.VarChar(100)
   postal_code    String  @db.VarChar(10)
   contact_id     Int
-  contact        Contact @relation(fields: [contact_id], references: [id])
 
   @@map("addresses")
 }
 
-model Booking {
-  id             Int    @id @default(autoincrement())
-  hotel_name     String
-  hotel_addreses String
-  name           String
+model Destination {
+  name_hotel        String    @id
+  hotel_addres      String    @db.VarChar(100)
+  guide_name        String    @db.VarChar(100)
+  price             String    @db.VarChar(100)
+  vehicle_name      String    @db.VarChar(100)
+  destination_price String    @db.VarChar(100)
+  police_number     String    @db.VarChar(100)
+  contact           Contact[]
+
+  @@map("destination")
 }
